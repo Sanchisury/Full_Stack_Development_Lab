@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 40px;
+}
+
+.resume {
+    background: white;
+    width: 800px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contact {
+    text-align: center;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.summary {
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #aaa;
+    margin: 15px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
