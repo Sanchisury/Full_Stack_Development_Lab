@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student CRUD</title>
+</head>
+<body>
+
+<h2>Add Student</h2>
+
+<input id="fname" placeholder="First Name">
+<input id="lname" placeholder="Last Name">
+<input id="roll" placeholder="Roll No">
+<input id="pass" placeholder="Password">
+<input id="contact" placeholder="Contact">
+
+<button onclick="addStudent()">Add</button>
+
+<h2>Students</h2>
+<button onclick="getStudents()">View All</button>
+
+<ul id="list"></ul>
+
+<script>
+function addStudent() {
+    fetch('http://localhost:3000/students', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            firstName: fname.value,
+            lastName: lname.value,
+            rollNo: roll.value,
+            password: pass.value,
+            contact: contact.value
+        })
+    }).then(res => res.json()).then(data => alert("Added"))
+}
+
+function getStudents() {
+    fetch('http://localhost:3000/students')
+    .then(res => res.json())
+    .then(data => {
+        list.innerHTML = ""
+        data.forEach(s => {
+            list.innerHTML += `<li>${s.firstName} - ${s.rollNo}</li>`
+        })
+    })
+}
+</script>
+
+</body>
+</html>
